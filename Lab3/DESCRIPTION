@@ -1,0 +1,10 @@
+Package: Lab3
+Type: Package
+Title: Dijkstra and Euclide
+Version: 1.0
+Date: 2019-09-18
+Author: Sarah Alsaadi
+Maintainer: <sarah.walid.alsaadi@liu.se>
+Description: Dijkstra finds the shortest distance and Euclide gives the greatest common divisor
+License: MIT License
+RoxygenNote: 6.1.1
