@@ -4,11 +4,12 @@ cache: packages
 env:
   - rstudio/rmarkdown
 install:
-  - R -e "install.packages('devtools')"
-- R -e "devtools::install_github('rstudio/rmarkdown')"
+  - Rscript -e 'install.packages(c("devtools","roxygen2","testthat"));devtools::install_deps("Lab3")'
+  - R -e "devtools::install_github('rstudio/rmarkdown')"
 script:
+  - Rscript -e 'devtools::check("Lab3")'
   - R -e "rmarkdown::render_site()"
-- tools/pdf_all
-- tools/headers
+  - tools/pdf_all
+  - tools/headers
 after_success:
   - ./tools/deploy.sh
