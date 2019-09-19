@@ -13,6 +13,12 @@ dijkstra<- function (graph, init_node){
   w <-graph[,3] #The weight of the edge
   nodes<-unique(v1) #The nodes in the graph
   stopifnot(init_node %in% nodes)
+  stopifnot(init_node %in% nodes)
+  stopifnot(is.numeric(init_node))
+  stopifnot(is.data.frame(graph))
+  stopifnot(length(graph) == 3)
+  
+  
   distance<-rep(Inf,length(nodes)) #Vector of the distance for each node, will be updated after every step of the algorithm
   distance[which (init_node==nodes)]<-0 #Set the distance of the initial node to 0
   current_node <- init_node
