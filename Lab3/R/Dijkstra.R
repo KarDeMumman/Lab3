@@ -5,7 +5,6 @@
 #' @examples
 #' dijkstra(wiki_graph,1)
 #' dijkstra(wiki_graph,3)
-#' \href{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}
 
 dijkstra<- function (graph, init_node){
   v1<-graph[,1] #The start of the edge
