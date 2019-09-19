@@ -1,3 +1,12 @@
+#' Find the shortest distance
+#' @param graph A dataframe.
+#' @param init_node the initial node.
+#' @return The shortest distance to each node starting from the initial node.
+#' @examples
+#' dijkstra(wiki_graph,1)
+#' dijkstra(wiki_graph,3)
+#' \href{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}
+
 dijkstra<- function (graph, init_node){
   v1<-graph[,1] #The start of the edge
   v2<-graph[,2] #The end of the edge
