@@ -17,6 +17,9 @@ dijkstra<- function (graph, init_node){
   stopifnot(is.numeric(init_node))
   stopifnot(is.data.frame(graph))
   stopifnot(length(graph) == 3)
+  stopifnot(is.numeric(v1))
+  stopifnot(is.numeric(v2))
+  stopifnot(is.numeric(w))
   
   
   distance<-rep(Inf,length(nodes)) #Vector of the distance for each node, will be updated after every step of the algorithm
