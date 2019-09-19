@@ -1,2 +1,14 @@
- language: r
+language: r
+sudo: false
 cache: packages
+env:
+  - rstudio/rmarkdown
+install:
+  - R -e "install.packages('devtools')"
+- R -e "devtools::install_github('rstudio/rmarkdown')"
+script:
+  - R -e "rmarkdown::render_site()"
+- tools/pdf_all
+- tools/headers
+after_success:
+  - ./tools/deploy.sh
