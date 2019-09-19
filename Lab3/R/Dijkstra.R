@@ -16,6 +16,7 @@ dijkstra<- function (graph, init_node){
   stopifnot(is.numeric(init_node))
   stopifnot(is.data.frame(graph))
   stopifnot(length(graph) == 3)
+  stopifnot(names(graph) == c("v1", "v2", "w"))
   stopifnot(is.numeric(v1))
   stopifnot(is.numeric(v2))
   stopifnot(is.numeric(w))
