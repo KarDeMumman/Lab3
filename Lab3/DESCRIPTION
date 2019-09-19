@@ -8,3 +8,5 @@ Maintainer: <sarah.walid.alsaadi@liu.se>, <nasme581@ad.liu.se>
 Description: Dijkstra's algorithm finds the shortest distance and the Euclidean algorithm gives the greatest common divisor.
 License: MIT License
 RoxygenNote: 6.1.1
+Suggests: 
+    testthat
